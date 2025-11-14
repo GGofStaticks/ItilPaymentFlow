@@ -27,17 +27,23 @@ namespace ItilPaymentFlow.Infrastructure.Persistence.Repositories
 
         public async Task<Ticket?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            return await _context.Set<Ticket>().FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
+            return await _context.Set<Ticket>()
+                .Include(t => t.Author)
+                .FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
         }
 
         public async Task<List<Ticket>> ListAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.Set<Ticket>().ToListAsync(cancellationToken);
+            return await _context.Set<Ticket>()
+                .Include(t => t.Author)
+                .ToListAsync(cancellationToken);
         }
 
         public IQueryable<Ticket> Query()
         {
-            return _context.Tickets.AsQueryable();
+            return _context.Tickets
+                .Include(t => t.Author)
+                .AsQueryable();
         }
     }
 }

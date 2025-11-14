@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ItilPaymentFlow.Application.Tickets.Queries.ListTickets
+{
+    public sealed class PagedResult<T>
+    {
+        public List<T> Items { get; }
+        public int Page { get; }
+        public int PageSize { get; }
+        public int TotalCount { get; }
+        public int TotalPages { get; }
+
+        public PagedResult(List<T> items, int page, int pageSize, int totalCount)
+        {
+            Items = items;
+            Page = page;
+            PageSize = pageSize;
+            TotalCount = totalCount;
+            TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+        }
+    }
+}
