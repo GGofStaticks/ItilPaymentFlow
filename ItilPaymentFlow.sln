@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70326ABA-F353-4077-9E61-D681B51C0239}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItilPaymentFlow.Domain", "src\ItilPaymentFlow.Domain\ItilPaymentFlow.Domain.csproj", "{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItilPaymentFlow.Application", "src\ItilPaymentFlow.Application\ItilPaymentFlow.Application.csproj", "{81649E9A-CB79-4243-922B-9AB0AE20A4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItilPaymentFlow.Infrastructure", "src\ItilPaymentFlow.Infrastructure\ItilPaymentFlow.Infrastructure.csproj", "{DA3B5B0C-AF0C-453E-A490-77D46ACACE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItilPaymentFlow.Api", "src\ItilPaymentFlow.Api\ItilPaymentFlow.Api.csproj", "{1BB62B4D-D7E6-4922-821E-A342AE7F7974}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D889869A-1D55-4D88-98D6-03F25D0FA008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItilPaymentFlow.UnitTests", "tests\ItilPaymentFlow.UnitTests\ItilPaymentFlow.UnitTests.csproj", "{4CF2973D-DCC1-43CF-939B-A82F30368BD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81649E9A-CB79-4243-922B-9AB0AE20A4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81649E9A-CB79-4243-922B-9AB0AE20A4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81649E9A-CB79-4243-922B-9AB0AE20A4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81649E9A-CB79-4243-922B-9AB0AE20A4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3B5B0C-AF0C-453E-A490-77D46ACACE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3B5B0C-AF0C-453E-A490-77D46ACACE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3B5B0C-AF0C-453E-A490-77D46ACACE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3B5B0C-AF0C-453E-A490-77D46ACACE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB62B4D-D7E6-4922-821E-A342AE7F7974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB62B4D-D7E6-4922-821E-A342AE7F7974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB62B4D-D7E6-4922-821E-A342AE7F7974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB62B4D-D7E6-4922-821E-A342AE7F7974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF2973D-DCC1-43CF-939B-A82F30368BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF2973D-DCC1-43CF-939B-A82F30368BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF2973D-DCC1-43CF-939B-A82F30368BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF2973D-DCC1-43CF-939B-A82F30368BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D3BB4A5-6ACD-493B-ADF7-40A0A36E0553} = {70326ABA-F353-4077-9E61-D681B51C0239}
+		{81649E9A-CB79-4243-922B-9AB0AE20A4CC} = {70326ABA-F353-4077-9E61-D681B51C0239}
+		{DA3B5B0C-AF0C-453E-A490-77D46ACACE21} = {70326ABA-F353-4077-9E61-D681B51C0239}
+		{1BB62B4D-D7E6-4922-821E-A342AE7F7974} = {70326ABA-F353-4077-9E61-D681B51C0239}
+		{4CF2973D-DCC1-43CF-939B-A82F30368BD9} = {D889869A-1D55-4D88-98D6-03F25D0FA008}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB4830BC-84CD-423A-A1F6-63B0168819A1}
+	EndGlobalSection
+EndGlobal
