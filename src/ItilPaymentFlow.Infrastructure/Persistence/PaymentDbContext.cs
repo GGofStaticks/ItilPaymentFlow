@@ -1,5 +1,6 @@
 ﻿using ItilPaymentFlow.Domain.Abstractions;
 using ItilPaymentFlow.Domain.Payments;
+using ItilPaymentFlow.Domain.Presale;
 using ItilPaymentFlow.Domain.Sessions;
 using ItilPaymentFlow.Domain.Tickets;
 using ItilPaymentFlow.Domain.Users;
@@ -19,10 +20,13 @@ namespace ItilPaymentFlow.Infrastructure.Persistence
         public DbSet<User> Users => Set<User>();
         public DbSet<Session> Sessions => Set<Session>();
         public DbSet<Ticket> Tickets => Set<Ticket>();
+        public DbSet<Offer> PresaleOffers => Set<Offer>();
+        public DbSet<Contract> PresaleContracts => Set<Contract>();
+        public DbSet<Meeting> PresaleMeetings => Set<Meeting>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // конфигурации из assembly (Payment, User, Ticket, Session)
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PaymentDbContext).Assembly);
 
             modelBuilder.Entity<User>(builder =>

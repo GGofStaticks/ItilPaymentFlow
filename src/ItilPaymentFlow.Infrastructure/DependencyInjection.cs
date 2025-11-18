@@ -34,6 +34,9 @@ public static class DependencyInjection
         services.AddScoped<ISessionRepository, SessionRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ITicketRepository, TicketRepository>();
+        services.AddScoped<IOfferRepository, OfferRepository>();
+        services.AddScoped<IContractRepository, ContractRepository>();
+        services.AddScoped<IMeetingRepository, MeetingRepository>();
         services.AddSingleton<IDateTimeProvider, SystemDateTimeProvider>();
 
         // минио настройки
