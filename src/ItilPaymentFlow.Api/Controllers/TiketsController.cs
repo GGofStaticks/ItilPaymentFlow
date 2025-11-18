@@ -74,9 +74,9 @@ namespace ItilPaymentFlow.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> List(CancellationToken ct)
+        public async Task<IActionResult> List([FromQuery] ListTicketsQuery query, CancellationToken ct)
         {
-            var list = await _sender.Send(new ListTicketsQuery(), ct);
+            var list = await _sender.Send(query, ct);
             return Ok(list);
         }
 

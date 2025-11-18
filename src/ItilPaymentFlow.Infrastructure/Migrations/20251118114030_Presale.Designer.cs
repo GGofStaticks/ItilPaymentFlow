@@ -3,6 +3,7 @@ using System;
 using ItilPaymentFlow.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ItilPaymentFlow.Infrastructure.Migrations
 {
     [DbContext(typeof(PaymentDbContext))]
-    partial class PaymentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251118114030_Presale")]
+    partial class Presale
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,7 +94,7 @@ namespace ItilPaymentFlow.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contracts", (string)null);
+                    b.ToTable("PresaleContracts", (string)null);
                 });
 
             modelBuilder.Entity("ItilPaymentFlow.Domain.Presale.Meeting", b =>
@@ -129,7 +132,7 @@ namespace ItilPaymentFlow.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Meetings", (string)null);
+                    b.ToTable("PresaleMeetings", (string)null);
                 });
 
             modelBuilder.Entity("ItilPaymentFlow.Domain.Presale.Offer", b =>
@@ -173,7 +176,7 @@ namespace ItilPaymentFlow.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Offers", (string)null);
+                    b.ToTable("PresaleOffers", (string)null);
                 });
 
             modelBuilder.Entity("ItilPaymentFlow.Domain.Sessions.Session", b =>
