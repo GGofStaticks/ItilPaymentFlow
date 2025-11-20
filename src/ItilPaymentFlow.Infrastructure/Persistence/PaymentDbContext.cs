@@ -1,4 +1,5 @@
 ﻿using ItilPaymentFlow.Domain.Abstractions;
+using ItilPaymentFlow.Domain.Assignments;
 using ItilPaymentFlow.Domain.Payments;
 using ItilPaymentFlow.Domain.Presale;
 using ItilPaymentFlow.Domain.Sessions;
@@ -20,6 +21,9 @@ namespace ItilPaymentFlow.Infrastructure.Persistence
         public DbSet<User> Users => Set<User>();
         public DbSet<Session> Sessions => Set<Session>();
         public DbSet<Ticket> Tickets => Set<Ticket>();
+        public DbSet<Assignment> Assignments => Set<Assignment>();
+        public DbSet<CompletedAssignment> CompletedAssignments => Set<CompletedAssignment>();
+        public DbSet<LoyaltyRule> LoyaltyRules => Set<LoyaltyRule>();
         public DbSet<Offer> PresaleOffers => Set<Offer>();
         public DbSet<Contract> PresaleContracts => Set<Contract>();
         public DbSet<Meeting> PresaleMeetings => Set<Meeting>();

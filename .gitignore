@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/minio-data/.minio.sys/tmp/32d73dc7-ac5c-4ac8-b426-17eae42522c6
